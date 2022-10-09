@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none; /*bo gach chan*/
+    text-transform:capitalize; /*ghi hoa chu cai dau*/
+    /* transition: .4s linear; chuyen dong khi khoi dong */
+}
+
+html{
+    font-size: 65%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+section{
+    padding: 3rem 8%;
+}
+
+
+header{
+    /* position: fixed; */
+    top:0; left: 0; right: 0;
+    background: white;
+    padding: 2rem 9%;
+    display: flex; /* dan hang ngang */
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 5rem 1rem rgba(0,0,0, .1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color: black;
+    font-weight: bolder;
+}
+
+header .logo span{
+    color:palevioletred;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+}
+
+/* header .navbar a:hover{
+    color: var(--pink);
+} */
+
+header .icons a{
+    font-size: 2rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 2.5rem;
+    color: #333;
+    border-radius: 0.5rem;
+    padding: 2rem 1rem;
+    cursor: pointer;
+    border: 0.5rem solid rgba(0,0,0,.2);
+    display: none;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/home-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.home .content{
+    max-width: 70%;
+}
+.home .content h3{
+    font-size: 5.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+.home .content span{
+    font-size: 2.9rem;
+    color:palevioletred;
+    padding: 1rem 0;
+    line-height:1.5;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    line-height:1.5;
+    color: #999;
+    padding: 1rem 2px;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    font-size: 2.3rem;
+    cursor: pointer;
+    padding: .9rem 2rem; /* tren duoi , trai phai*/
+}
+.btn:hover{
+    background: palevioletred;
+}
+
+@media (max-width:990px){
+    html{
+        font-size: 50%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+        overflow-x: hidden;
+    }
+
+    header{
+        padding: 4rem; /*canh chinh cho thanh nav*/
+    }
+    section{
+        padding: 4rem;
+    }
+    .home{
+        background:url(/home-bg.jpg);
+        background-position: left;
+    }
+    .home .content h3{
+        font-size: 9rem;
+        text-transform: capitalize;
+    }
+}
+
+@media (max-width: 768px) {
+    header .fa-bars{
+        display: block; /* hien thi bieu tuong menu*/
+    }
+    header{
+        position: relative;
+    }
+
+    header .navbar{
+        position:absolute;
+        top:100%; left:0; right:0;
+        background-color: #fff;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        display: none;  /* an menu*/
+    }
+
+    header #toggler:checked ~ .navbar{
+        display: block; 
+    }
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border:1rem solid rgba(0,0,0, .1);
+        display: block; /* hien thi menu khi an vao*/
+    }
+}
+
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+        
+    }
+
+    header{
+        padding: 2rem;
+    }
+}
+
